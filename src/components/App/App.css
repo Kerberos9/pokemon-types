@@ -1,0 +1,14 @@
+.types-table {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 80px;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.types-table > div {
+  border: 2px solid;
+  padding: 1em;
+}

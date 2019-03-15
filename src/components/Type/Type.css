@@ -1,0 +1,15 @@
+.default {
+  background-color: yellow;
+}
+
+.half {
+  background-color: red;
+}
+
+.double {
+  background-color: green;
+}
+
+.immune {
+  background-color: grey;
+}
