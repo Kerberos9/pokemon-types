@@ -19,6 +19,9 @@ class Type extends Component {
         this.props.stats[this.props.selected[1]];
     }
     switch (result) {
+      case -2:
+      damageClass = 'half';
+      break;
       case -1:
         damageClass = 'half';
         break;
