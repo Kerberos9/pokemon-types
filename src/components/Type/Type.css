@@ -1,13 +1,13 @@
 .default {
-  background-color: yellow;
+  background-color: #d6cc5c;
 }
 
 .half {
-  background-color: red;
+  background-color: #a84354; 
 }
 
 .double {
-  background-color: green;
+  background-color: rgb(19, 168, 19);
 }
 
 .immune {

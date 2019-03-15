@@ -1,3 +1,7 @@
+.App{
+  text-align: center;
+  margin-top: 1em;
+}
 .types-table {
   display: grid;
   text-align: center;
@@ -6,9 +10,27 @@
   grid-auto-rows: 80px;
   font-size: 1em;
   line-height: 1em;
+  padding: 1em;
 }
 
 .types-table > div {
-  border: 2px solid;
+  border: 1.5px solid;
+  border-radius: 1em;
   padding: 1em;
+}
+
+select{
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 1em;
+  background-color: #ffffff;
+  margin: 1em;
+}
+
+.types-select{
+  display: grid inline-block;
+  justify-items: center;
+  text-align: center;
+  
 }

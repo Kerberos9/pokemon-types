@@ -28,11 +28,14 @@ class Type extends Component {
       case 1:
         damageClass = 'double';
         break;
+        case 2:
+        damageClass = 'double';
+        break;
       default:
         damageClass = 'immune';
         break;
     }
-    this.setState({ damageClass });
+    this.setState({ damageClass, value: result });
   }
 
   render() {

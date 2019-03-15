@@ -20,7 +20,10 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+      Select the enemy type(s)
+      <div className='types-select'>
         <select onChange={this.onFirstTypeChange.bind(this)}>
+          <option selected disabled>Type 1</option>
           <option value='normal'>Normal</option>
           <option value='fighting'>Fighting</option>
           <option value='flying'>Flying</option>
@@ -41,6 +44,7 @@ class App extends Component {
           <option value='dark'>Dark</option>
         </select>
         <select onChange={this.onSecondTypeChange.bind(this)}>
+        <option selected disabled>Type 2</option>
           <option value='normal'>Normal</option>
           <option value='fighting'>Fighting</option>
           <option value='flying'>Flying</option>
@@ -60,6 +64,7 @@ class App extends Component {
           <option value='fairy'>Fairy</option>
           <option value='dark'>Dark</option>
         </select>
+        </div>
         <div className='types-table'>
           {Object.keys(types).map((type, i) => (
             <Type
