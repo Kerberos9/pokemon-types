@@ -20,8 +20,8 @@ class Type extends Component {
     }
     switch (result) {
       case -2:
-      damageClass = 'half';
-      break;
+        damageClass = 'quarter';
+        break;
       case -1:
         damageClass = 'half';
         break;
@@ -31,8 +31,8 @@ class Type extends Component {
       case 1:
         damageClass = 'double';
         break;
-        case 2:
-        damageClass = 'double';
+      case 2:
+        damageClass = 'quad';
         break;
       default:
         damageClass = 'immune';

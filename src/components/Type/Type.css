@@ -3,13 +3,21 @@
 }
 
 .half {
-  background-color: #a84354; 
+  background-color: #a84354ab; 
 }
 
 .double {
-  background-color: rgb(19, 168, 19);
+  background-color: rgb(3, 180, 3);
 }
 
 .immune {
   background-color: grey;
+}
+
+.quarter {
+  background-color: #e0043fe7; 
+}
+
+.quad{
+  background-color: rgba(6, 187, 142, 0.692)
 }

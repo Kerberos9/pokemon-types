@@ -1,11 +1,12 @@
-.App{
+.App {
   text-align: center;
   margin-top: 1em;
 }
 .types-table {
   display: grid;
   text-align: center;
-  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  grid-template-columns: repeat(5, 10em);
   grid-gap: 10px;
   grid-auto-rows: 80px;
   font-size: 1em;
@@ -19,7 +20,36 @@
   padding: 1em;
 }
 
-select{
+.colors-legend {
+  display: grid;
+  grid-template-columns: repeat(1, 6em);
+  justify-content: center;
+  grid-gap: 10px;
+  grid-auto-rows: 60px;
+  margin: 2em 1em;
+}
+
+.colors-div {
+  display: grid;
+  grid-template-columns: repeat(5, 6em);
+  justify-content: center;
+  grid-gap: 10px;
+  grid-auto-rows: 60px;
+  margin: 0 1em;
+}
+
+.immune-div {
+  display: grid;
+  justify-content: center;
+}
+
+.colors-legend > div > div {
+  border: 1.5px solid;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+select {
   text-align: center;
   width: 100px;
   height: 40px;
@@ -28,9 +58,8 @@ select{
   margin: 1em;
 }
 
-.types-select{
+.types-select {
   display: grid inline-block;
   justify-items: center;
   text-align: center;
-  
 }
