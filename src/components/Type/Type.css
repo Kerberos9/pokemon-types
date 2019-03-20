@@ -1,23 +1,23 @@
 .default {
-  background-color: #d6cc5c;
+  background-color: #bfb48f;
 }
 
 .half {
-  background-color: #a84354ab; 
+  background-color: #904e55;
 }
 
 .double {
-  background-color: rgb(3, 180, 3);
+  background-color: #70ae6e;
 }
 
 .immune {
-  background-color: grey;
+  background-color: #564e58;
 }
 
 .quarter {
-  background-color: #e0043fe7; 
+  background-color: #622537;
 }
 
-.quad{
-  background-color: rgba(6, 187, 142, 0.692)
+.quad {
+  background-color: #7798ab;
 }
