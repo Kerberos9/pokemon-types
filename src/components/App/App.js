@@ -1,75 +1,116 @@
 import React, { Component } from 'react';
 import './App.css';
 import types from '../../data/types';
+import pokemon from '../../data/pokemon';
 import Type from '../Type/Type';
+import Select from 'react-select';
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { selected: ['normal', 'normal'] };
+    document.querySelector('.pokemon-select');
   }
   onFirstTypeChange = event => {
     let selected = this.state.selected;
-    selected[0] = event.target.value;
+    selected[0] = event.value;
     this.setState({ selected });
   };
   onSecondTypeChange = event => {
     let selected = this.state.selected;
-    selected[1] = event.target.value;
+    selected[1] = event.value;
     this.setState({ selected });
   };
+
+  onPokemonSelect = event => {
+    let types = event ? event.value.split('|') : null;
+    let selected;
+    if (types) {
+      selected = [types[0].toLowerCase(), types[1].toLowerCase()];
+      this.setState({ selected });
+    }
+    document.querySelector('.first-type-select').value = selected
+      ? selected[0]
+      : null;
+  };
+  selectStyle = {
+    control: (base, state) => ({
+      ...base,
+      background: '#230c33',
+      color: '#f2cee6'
+    }),
+    menuList: base => ({
+      ...base,
+      background: '#230c33',
+      color: '#f2cee6'
+    }),
+    option: base => ({
+      ...base,
+      background: '#230c33',
+      color: '#f2cee6',
+      border: '1px solid black',
+      borderRadius: '5px'
+    }),
+    singleValue: base => ({
+      ...base,
+      background: '#230c33',
+      color: '#f2cee6'
+    }),
+    input: base => ({
+      ...base,
+      background: '#230c33',
+      color: '#f2cee6'
+    })
+  };
+
+  typeOptions = [
+    { value: 'bug', label: 'Bug' },
+    { value: 'dark', label: 'Dark' },
+    { value: 'dragon', label: 'Dragon' },
+    { value: 'electric', label: 'Electric' },
+    { value: 'fairy', label: 'Fairy' },
+    { value: 'fighting', label: 'Fighting' },
+    { value: 'fire', label: 'Fire' },
+    { value: 'flying', label: 'Flying' },
+    { value: 'ghost', label: 'Ghost' },
+    { value: 'grass', label: 'Grass' },
+    { value: 'ground', label: 'Ground' },
+    { value: 'ice', label: 'Ice' },
+    { value: 'normal', label: 'Normal' },
+    { value: 'poison', label: 'Poison' },
+    { value: 'psychic', label: 'Psychic' },
+    { value: 'rock', label: 'Rock' },
+    { value: 'steel', label: 'Steel' },
+    { value: 'water', label: 'Water' }
+  ];
+
   render() {
     return (
       <div className='App'>
         <strong>Select the enemy type(s)</strong>
-        <div className='types-select'>
-          <select
-            onChange={this.onFirstTypeChange.bind(this)}
-            defaultValue='Type 1'
-          >
-            <option disabled>Type 1</option>
-            <option value='bug'>Bug</option>
-            <option value='dark'>Dark</option>
-            <option value='dragon'>Dragon</option>
-            <option value='electric'>Electric</option>
-            <option value='fairy'>Fairy</option>
-            <option value='fighting'>Fighting</option>
-            <option value='fire'>Fire</option>
-            <option value='flying'>Flying</option>
-            <option value='ghost'>Ghost</option>
-            <option value='grass'>Grass</option>
-            <option value='ground'>Ground</option>
-            <option value='ice'>Ice</option>
-            <option value='normal'>Normal</option>
-            <option value='poison'>Poison</option>
-            <option value='psychic'>Psychic</option>
-            <option value='rock'>Rock</option>
-            <option value='steel'>Steel</option>
-            <option value='water'>Water</option>
-          </select>
-          <select
-            onChange={this.onSecondTypeChange.bind(this)}
-            defaultValue='Type 2'
-          >
-            <option disabled>Type 2</option>
-            <option value='bug'>Bug</option>
-            <option value='dark'>Dark</option>
-            <option value='dragon'>Dragon</option>
-            <option value='electric'>Electric</option>
-            <option value='fairy'>Fairy</option>
-            <option value='fighting'>Fighting</option>
-            <option value='fire'>Fire</option>
-            <option value='flying'>Flying</option>
-            <option value='ghost'>Ghost</option>
-            <option value='grass'>Grass</option>
-            <option value='ground'>Ground</option>
-            <option value='ice'>Ice</option>
-            <option value='normal'>Normal</option>
-            <option value='poison'>Poison</option>
-            <option value='psychic'>Psychic</option>
-            <option value='rock'>Rock</option>
-            <option value='steel'>Steel</option>
-            <option value='water'>Water</option>
-          </select>
+        <div className='input-fields'>
+          <div className='types-select'>
+            <Select
+              styles={this.selectStyle}
+              options={this.typeOptions}
+              onChange={this.onFirstTypeChange.bind(this)}
+              className='type-select first-type-select'
+            />
+            <Select
+              styles={this.selectStyle}
+              options={this.typeOptions}
+              onChange={this.onSecondTypeChange.bind(this)}
+              className='type-select second-type-select'
+            />
+          </div>
+          <strong>Or select the enemy pokémon directly</strong>
+          <div className='pokemon-select'>
+            <Select
+              styles={this.selectStyle}
+              isClearable
+              options={pokemon}
+              onChange={this.onPokemonSelect}
+            />
+          </div>
         </div>
         <div className='types-table'>
           {Object.keys(types).map((type, i) => (
