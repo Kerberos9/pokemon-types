@@ -190,13 +190,15 @@ class App extends Component {
           <div className='immune-div'>
             <div className='immune'>{this.getTranslation('immune')}</div>
           </div>
-        </div>
-        <div className='footer'>
-          <a href='https://github.com/Kerberos9/pokemon-type-helper'>Github</a>{' '}
-          - Discord: Kerberos#7290 -{' '}
-          <a href='https://www.paypal.me/Kashbel'>
-            {this.getTranslation('donate')}
-          </a>
+          <div className='footer'>
+            <a href='https://github.com/Kerberos9/pokemon-type-helper'>
+              Github
+            </a>{' '}
+            - Discord: Kerberos#7290 -{' '}
+            <a href='https://www.paypal.me/Kashbel'>
+              {this.getTranslation('donate')}
+            </a>
+          </div>
         </div>
       </div>
     );
