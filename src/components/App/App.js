@@ -4,21 +4,27 @@ import types from '../../data/types';
 import pokemon from '../../data/pokemon';
 import Type from '../Type/Type';
 import Select from 'react-select';
+import createFilterOptions from 'react-select-fast-filter-options';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { selected: ['normal', 'normal'] };
-    document.querySelector('.pokemon-select');
+    this.state = { selected: [null, null], firstType: null, secondType: null };
   }
   onFirstTypeChange = event => {
     let selected = this.state.selected;
     selected[0] = event.value;
-    this.setState({ selected });
+    this.setState({
+      selected,
+      firstType: { label: event.label, value: event.value }
+    });
   };
   onSecondTypeChange = event => {
     let selected = this.state.selected;
     selected[1] = event.value;
-    this.setState({ selected });
+    this.setState({
+      selected,
+      secondType: { label: event.label, value: event.value }
+    });
   };
 
   onPokemonSelect = event => {
@@ -26,11 +32,18 @@ class App extends Component {
     let selected;
     if (types) {
       selected = [types[0].toLowerCase(), types[1].toLowerCase()];
-      this.setState({ selected });
+      this.setState({
+        selected,
+        firstType: { label: types[0], value: types[0].toLowerCase() },
+        secondType: { label: types[1], value: types[1].toLowerCase() }
+      });
+    } else {
+      this.setState({
+        selected: [null, null],
+        firstType: null,
+        secondType: null
+      });
     }
-    document.querySelector('.first-type-select').value = selected
-      ? selected[0]
-      : null;
   };
   selectStyle = {
     control: (base, state) => ({
@@ -83,6 +96,10 @@ class App extends Component {
     { value: 'water', label: 'Water' }
   ];
 
+  filterOptions = createFilterOptions({
+    pokemon
+  });
+
   render() {
     return (
       <div className='App'>
@@ -94,12 +111,14 @@ class App extends Component {
               options={this.typeOptions}
               onChange={this.onFirstTypeChange.bind(this)}
               className='type-select first-type-select'
+              value={this.state.firstType}
             />
             <Select
               styles={this.selectStyle}
               options={this.typeOptions}
               onChange={this.onSecondTypeChange.bind(this)}
               className='type-select second-type-select'
+              value={this.state.secondType}
             />
           </div>
           <strong>Or select the enemy pokémon directly</strong>
@@ -108,7 +127,8 @@ class App extends Component {
               styles={this.selectStyle}
               isClearable
               options={pokemon}
-              onChange={this.onPokemonSelect}
+              filterOptions={this.filterOptions}
+              onChange={this.onPokemonSelect.bind(this)}
             />
           </div>
         </div>
@@ -118,11 +138,7 @@ class App extends Component {
               key={i}
               type={type}
               stats={types[type]}
-              selected={
-                this.state && this.state.selected
-                  ? this.state.selected
-                  : [type, type]
-              }
+              selected={this.state.selected}
             />
           ))}
         </div>

@@ -18,6 +18,7 @@ const types = {
     dragon: 0,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   fighting: {
     normal: 1,
@@ -37,7 +38,8 @@ const types = {
     ice: 1,
     dragon: 0,
     fairy: -1,
-    dark:  1,
+    dark: 1,
+    null: 0
   },
   flying: {
     normal: 0,
@@ -52,12 +54,13 @@ const types = {
     fire: 0,
     water: 0,
     grass: 1,
-    electric:-1, 
+    electric: -1,
     psychic: 0,
     ice: 0,
     dragon: 0,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   poison: {
     normal: 0,
@@ -78,6 +81,7 @@ const types = {
     dragon: 0,
     fairy: 1,
     dark: 0,
+    null: 0
   },
   ground: {
     normal: 0,
@@ -98,6 +102,7 @@ const types = {
     dragon: 0,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   rock: {
     normal: 0,
@@ -118,6 +123,7 @@ const types = {
     dragon: 0,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   bug: {
     normal: 0,
@@ -138,6 +144,7 @@ const types = {
     dragon: 0,
     fairy: -1,
     dark: 1,
+    null: 0
   },
   ghost: {
     normal: -100,
@@ -158,6 +165,7 @@ const types = {
     dragon: 0,
     fairy: 0,
     dark: -1,
+    null: 0
   },
   steel: {
     normal: 0,
@@ -178,6 +186,7 @@ const types = {
     dragon: 0,
     fairy: 1,
     dark: 0,
+    null: 0
   },
   fire: {
     normal: 0,
@@ -198,6 +207,7 @@ const types = {
     dragon: -1,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   water: {
     normal: 0,
@@ -218,6 +228,7 @@ const types = {
     dragon: -1,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   grass: {
     normal: 0,
@@ -238,6 +249,7 @@ const types = {
     dragon: -1,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   electric: {
     normal: 0,
@@ -258,6 +270,7 @@ const types = {
     dragon: -1,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   psychic: {
     normal: 0,
@@ -278,6 +291,7 @@ const types = {
     dragon: 0,
     fairy: 0,
     dark: -100,
+    null: 0
   },
   ice: {
     normal: 0,
@@ -298,6 +312,7 @@ const types = {
     dragon: 1,
     fairy: 0,
     dark: 0,
+    null: 0
   },
   dragon: {
     normal: 0,
@@ -318,6 +333,7 @@ const types = {
     dragon: 1,
     fairy: -100,
     dark: 0,
+    null: 0
   },
   fairy: {
     normal: 0,
@@ -338,6 +354,7 @@ const types = {
     dragon: 1,
     fairy: 0,
     dark: 1,
+    null: 0
   },
   dark: {
     normal: 0,
@@ -357,7 +374,8 @@ const types = {
     ice: 0,
     dragon: 0,
     fairy: -1,
-    dark:-1,
+    dark: -1,
+    null: 0
   }
 };
 export default types;
