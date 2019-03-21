@@ -150,7 +150,9 @@ class App extends Component {
               isClearable
             />
           </div>
-          <strong>{this.getTranslation('pokemon_select')}</strong>
+          <p className='pokemon-select-label'>
+            <strong>{this.getTranslation('pokemon_select')}</strong>
+          </p>
           <div className='pokemon-select'>
             <Select
               styles={this.selectStyle}
@@ -174,7 +176,7 @@ class App extends Component {
             />
           ))}
         </div>
-        <div style={{ marginTop: '3em' }}>
+        <div className='color-legend-label'>
           <strong>{this.getTranslation('color_legend')}</strong>
         </div>
         <div className='colors-legend'>
