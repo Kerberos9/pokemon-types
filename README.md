@@ -12,7 +12,7 @@ If you want to run it locally, or if you want to develop something about it, you
 
 ## Planned features
 
-- Pokémon selector, so you can just put the name of the pokémon and it will fill the types
+- ~~Pokémon selector, so you can just put the name of the pokémon and it will fill the types~~ ✅
 
 ## Other
 
