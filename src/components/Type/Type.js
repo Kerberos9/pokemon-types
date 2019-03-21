@@ -39,8 +39,11 @@ class Type extends Component {
         damageClass = 'immune';
         break;
     }
-
-    if (this.props.selectedPokemon.label === 'Shedinja' && result < 1) {
+    if (
+      this.props.selectedPokemon &&
+      this.props.selectedPokemon.label === 'Shedinja' &&
+      result < 1
+    ) {
       damageClass = 'immune';
     }
     if (damageClass !== this.state.damageClass) {
