@@ -12,18 +12,18 @@ class App extends Component {
   }
   onFirstTypeChange = event => {
     let selected = this.state.selected;
-    selected[0] = event.value;
+    selected[0] = event ? event.value : null;
     this.setState({
       selected,
-      firstType: { label: event.label, value: event.value }
+      firstType: event ? { label: event.label, value: event.value } : null
     });
   };
   onSecondTypeChange = event => {
     let selected = this.state.selected;
-    selected[1] = event.value;
+    selected[1] = event ? event.value : null;
     this.setState({
       selected,
-      secondType: { label: event.label, value: event.value }
+      secondType: event ? { label: event.label, value: event.value } : null
     });
   };
 
@@ -112,6 +112,7 @@ class App extends Component {
               onChange={this.onFirstTypeChange.bind(this)}
               className='type-select first-type-select'
               value={this.state.firstType}
+              isClearable
             />
             <Select
               styles={this.selectStyle}
@@ -119,6 +120,7 @@ class App extends Component {
               onChange={this.onSecondTypeChange.bind(this)}
               className='type-select second-type-select'
               value={this.state.secondType}
+              isClearable
             />
           </div>
           <strong>Or select the enemy pokémon directly</strong>
