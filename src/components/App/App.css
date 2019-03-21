@@ -93,3 +93,14 @@ select {
 .pokemon-select {
   margin-top: 0.5em;
 }
+
+.footer {
+  position: absolute;
+  bottom: 1em;
+  text-align: center;
+  width: 100vw;
+}
+
+.footer a {
+  color: #db85be;
+}

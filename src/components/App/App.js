@@ -8,7 +8,12 @@ import createFilterOptions from 'react-select-fast-filter-options';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { selected: [null, null], firstType: null, secondType: null };
+    this.state = {
+      selected: [null, null],
+      firstType: null,
+      secondType: null,
+      selectedPokemon: null
+    };
   }
   onFirstTypeChange = event => {
     let selected = this.state.selected;
@@ -145,6 +150,7 @@ class App extends Component {
               type={type}
               stats={types[type]}
               selected={this.state.selected}
+              selectedPokemon={this.state.selectedPokemon}
             />
           ))}
         </div>
@@ -162,6 +168,11 @@ class App extends Component {
           <div className='immune-div'>
             <div className='immune'>Immune</div>
           </div>
+        </div>
+        <div className='footer'>
+          <a href='https://github.com/Kerberos9/pokemon-type-helper'>Github</a>{' '}
+          - Discord: Kerberos#7290 -{' '}
+          <a href='https://www.paypal.me/Kashbel'>Donate</a>
         </div>
       </div>
     );
