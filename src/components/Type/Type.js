@@ -5,10 +5,6 @@ class Type extends Component {
     super(props);
     this.state = { damageClass: 'default', value: 0 };
   }
-  capitalizeFirstLetter = string => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
-
   componentDidUpdate(prevProps, prevState, snapshot) {
     let result = 0;
     let damageClass = 'default';
@@ -54,7 +50,7 @@ class Type extends Component {
   render() {
     return (
       <div className={this.state ? this.state.damageClass : ''}>
-        <p>{this.capitalizeFirstLetter(this.props.type)}</p>
+        <p>{this.props.typeLabel}</p>
       </div>
     );
   }

@@ -5,6 +5,7 @@ import pokemon from '../../data/pokemon';
 import Type from '../Type/Type';
 import Select from 'react-select';
 import createFilterOptions from 'react-select-fast-filter-options';
+import translations from '../../data/translations';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -12,8 +13,33 @@ class App extends Component {
       selected: [null, null],
       firstType: null,
       secondType: null,
-      selectedPokemon: null
+      selectedPokemon: null,
+      locale: localStorage.getItem('locale') || 'es',
+      typeOptions: []
     };
+  }
+  componentDidMount() {
+    let typeOptions = [
+      { value: 'bug', label: this.getTranslation('bug') },
+      { value: 'dark', label: this.getTranslation('dark') },
+      { value: 'dragon', label: this.getTranslation('dragon') },
+      { value: 'electric', label: this.getTranslation('electric') },
+      { value: 'fairy', label: this.getTranslation('fairy') },
+      { value: 'fighting', label: this.getTranslation('fighting') },
+      { value: 'fire', label: this.getTranslation('fire') },
+      { value: 'flying', label: this.getTranslation('flying') },
+      { value: 'ghost', label: this.getTranslation('ghost') },
+      { value: 'grass', label: this.getTranslation('grass') },
+      { value: 'ground', label: this.getTranslation('ground') },
+      { value: 'ice', label: this.getTranslation('ice') },
+      { value: 'normal', label: this.getTranslation('normal') },
+      { value: 'poison', label: this.getTranslation('poison') },
+      { value: 'psychic', label: this.getTranslation('psychic') },
+      { value: 'rock', label: this.getTranslation('rock') },
+      { value: 'steel', label: this.getTranslation('steel') },
+      { value: 'water', label: this.getTranslation('water') }
+    ];
+    this.setState({ typeOptions });
   }
   onFirstTypeChange = event => {
     let selected = this.state.selected;
@@ -83,40 +109,33 @@ class App extends Component {
     })
   };
 
-  typeOptions = [
-    { value: 'bug', label: 'Bug' },
-    { value: 'dark', label: 'Dark' },
-    { value: 'dragon', label: 'Dragon' },
-    { value: 'electric', label: 'Electric' },
-    { value: 'fairy', label: 'Fairy' },
-    { value: 'fighting', label: 'Fighting' },
-    { value: 'fire', label: 'Fire' },
-    { value: 'flying', label: 'Flying' },
-    { value: 'ghost', label: 'Ghost' },
-    { value: 'grass', label: 'Grass' },
-    { value: 'ground', label: 'Ground' },
-    { value: 'ice', label: 'Ice' },
-    { value: 'normal', label: 'Normal' },
-    { value: 'poison', label: 'Poison' },
-    { value: 'psychic', label: 'Psychic' },
-    { value: 'rock', label: 'Rock' },
-    { value: 'steel', label: 'Steel' },
-    { value: 'water', label: 'Water' }
-  ];
-
   filterOptions = createFilterOptions({
     pokemon
   });
 
+  getTranslation = word => {
+    return translations[this.state.locale][word];
+  };
+  switchLocale = () => {
+    let locale = this.state.locale === 'es' ? 'en' : 'es';
+    this.setState({ locale });
+    localStorage.setItem('locale', locale);
+  };
+
   render() {
     return (
       <div className='App'>
-        <strong>Select the enemy type(s)</strong>
+        <div className='language-change'>
+          <button onClick={this.switchLocale.bind(this)}>
+            {this.getTranslation('switch')}
+          </button>
+        </div>
+        <strong>{this.getTranslation('select')}</strong>
         <div className='input-fields'>
           <div className='types-select'>
             <Select
               styles={this.selectStyle}
-              options={this.typeOptions}
+              options={this.state.typeOptions}
               onChange={this.onFirstTypeChange.bind(this)}
               className='type-select first-type-select'
               value={this.state.firstType}
@@ -124,14 +143,14 @@ class App extends Component {
             />
             <Select
               styles={this.selectStyle}
-              options={this.typeOptions}
+              options={this.state.typeOptions}
               onChange={this.onSecondTypeChange.bind(this)}
               className='type-select second-type-select'
               value={this.state.secondType}
               isClearable
             />
           </div>
-          <strong>Or select the enemy pokémon directly</strong>
+          <strong>{this.getTranslation('pokemon_select')}</strong>
           <div className='pokemon-select'>
             <Select
               styles={this.selectStyle}
@@ -148,6 +167,7 @@ class App extends Component {
             <Type
               key={i}
               type={type}
+              typeLabel={this.getTranslation(type)}
               stats={types[type]}
               selected={this.state.selected}
               selectedPokemon={this.state.selectedPokemon}
@@ -155,7 +175,7 @@ class App extends Component {
           ))}
         </div>
         <div style={{ marginTop: '3em' }}>
-          <strong>Color Legend</strong>
+          <strong>{this.getTranslation('color_legend')}</strong>
         </div>
         <div className='colors-legend'>
           <div className='colors-div'>
@@ -166,13 +186,15 @@ class App extends Component {
             <div className='quad'>x4</div>
           </div>
           <div className='immune-div'>
-            <div className='immune'>Immune</div>
+            <div className='immune'>{this.getTranslation('immune')}</div>
           </div>
         </div>
         <div className='footer'>
           <a href='https://github.com/Kerberos9/pokemon-type-helper'>Github</a>{' '}
           - Discord: Kerberos#7290 -{' '}
-          <a href='https://www.paypal.me/Kashbel'>Donate</a>
+          <a href='https://www.paypal.me/Kashbel'>
+            {this.getTranslation('donate')}
+          </a>
         </div>
       </div>
     );

@@ -105,3 +105,19 @@ select {
 .footer a {
   color: #db85be;
 }
+
+.language-change {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}
+
+.language-change > button {
+  background: none;
+  color: #f2cee6;
+  border: none;
+}
+
+.language-change > button:hover {
+  border: 1px solid;
+}
