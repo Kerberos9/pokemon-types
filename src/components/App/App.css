@@ -96,9 +96,10 @@ select {
 
 .footer {
   position: absolute;
-  bottom: 1em;
+  bottom: 0;
   text-align: center;
   width: 100vw;
+  background-color: #230c33;
 }
 
 .footer a {
