@@ -46,7 +46,12 @@ class App extends Component {
     selected[0] = event ? event.value : null;
     this.setState({
       selected,
-      firstType: event ? { label: event.label, value: event.value } : null,
+      firstType: event
+        ? {
+            label: event.label,
+            value: event.value
+          }
+        : null,
       selectedPokemon: null
     });
   };
@@ -55,7 +60,12 @@ class App extends Component {
     selected[1] = event ? event.value : null;
     this.setState({
       selected,
-      secondType: event ? { label: event.label, value: event.value } : null,
+      secondType: event
+        ? {
+            label: event.label,
+            value: event.value
+          }
+        : null,
       selectedPokemon: null
     });
   };
@@ -65,10 +75,17 @@ class App extends Component {
     let selected;
     if (types) {
       selected = [types[0].toLowerCase(), types[1].toLowerCase()];
+      console.log(types);
       this.setState({
         selected,
-        firstType: { label: types[0], value: types[0].toLowerCase() },
-        secondType: { label: types[1], value: types[1].toLowerCase() },
+        firstType: {
+          label: this.getTranslation(types[0].toLowerCase()),
+          value: types[0].toLowerCase()
+        },
+        secondType: {
+          label: this.getTranslation(types[1].toLowerCase()),
+          value: types[1].toLowerCase()
+        },
         selectedPokemon: {
           label: event ? event.label : null,
           value: event ? event.value : null
