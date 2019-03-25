@@ -164,6 +164,7 @@ class App extends Component {
               options={pokemon}
               filterOptions={this.filterOptions}
               onChange={this.onPokemonSelect.bind(this)}
+              value={this.state.selectedPokemon}
             />
           </div>
         </div>
