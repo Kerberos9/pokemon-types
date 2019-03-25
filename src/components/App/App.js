@@ -69,13 +69,17 @@ class App extends Component {
         selected,
         firstType: { label: types[0], value: types[0].toLowerCase() },
         secondType: { label: types[1], value: types[1].toLowerCase() },
-        selectedPokemon: { label: event.label, value: event.value }
+        selectedPokemon: {
+          label: event ? event.label : null,
+          value: event ? event.value : null
+        }
       });
     } else {
       this.setState({
         selected: [null, null],
         firstType: null,
-        secondType: null
+        secondType: null,
+        selectedPokemon: null
       });
     }
   };
@@ -160,7 +164,6 @@ class App extends Component {
               options={pokemon}
               filterOptions={this.filterOptions}
               onChange={this.onPokemonSelect.bind(this)}
-              value={this.state.selectedPokemon}
             />
           </div>
         </div>
