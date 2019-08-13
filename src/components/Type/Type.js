@@ -11,6 +11,7 @@ class Type extends Component {
     if (this.props.selected[0] === this.props.selected[1]) {
       result += this.props.stats[this.props.selected[0]];
     } else {
+      
       result +=
         this.props.stats[this.props.selected[0]] +
         this.props.stats[this.props.selected[1]];

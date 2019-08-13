@@ -6,7 +6,7 @@
     "express": "^4.16.4",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8",
+    "react-scripts": "3.0.0",
     "react-select": "^2.4.2",
     "react-select-fast-filter-options": "^0.2.3",
     "serve": "^10.1.2"
@@ -27,5 +27,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {}
 }
