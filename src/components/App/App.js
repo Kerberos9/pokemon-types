@@ -43,7 +43,6 @@ class App extends Component {
       { value: "water", label: this.getTranslation("water") }
     ];
     this.setState({ typeOptions });
-    console.log("TCL: App -> updatePokemonTypes -> typeOptions", typeOptions);
   };
   onFirstTypeChange = event => {
     let selected = this.state.selected;
