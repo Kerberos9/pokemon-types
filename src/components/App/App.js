@@ -78,7 +78,6 @@ class App extends Component {
     let selected;
     if (types) {
       selected = [types[0].toLowerCase(), types[1].toLowerCase()];
-      console.log(types);
       this.setState({
         selected,
         firstType: {
