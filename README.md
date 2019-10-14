@@ -8,7 +8,7 @@ If you only care about using the app, you can just go to the [live version](http
 
 ## Run it yourself
 
-If you want to run it locally, or if you want to develop something about it, you just need to clone the repo, and run `npm install && npm start` to run a development server.
+If you want to run it locally, or if you want to develop something about it, you just need to clone the repo, and run `npm install` to get everything ready. After that, if you want to work on it, use `npm run dev` to start a local development server, or use `npm run build && npm start` to run a local production build.
 
 ## Planned features
 
