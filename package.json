@@ -12,7 +12,7 @@
     "serve": "^11"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "BROWSER=firefox-developer-edition && react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",

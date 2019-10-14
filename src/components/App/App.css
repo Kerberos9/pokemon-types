@@ -2,16 +2,19 @@ body {
   background-color: #230c33;
   color: #f2cee6;
 }
+
 .types-table {
   display: grid;
   text-align: center;
   justify-content: center;
 }
-.types-table > div {
+
+.types-table>div {
   border: 1.5px solid;
   border-radius: 1em;
   color: black;
 }
+
 .colors-legend {
   display: grid;
   grid-template-columns: repeat(1, 100vw);
@@ -25,9 +28,11 @@ body {
   justify-content: center;
   color: black;
 }
-.colors-legend > div > div {
+
+.colors-legend>div>div {
   border: 1.5px solid;
 }
+
 .types-select {
   display: grid;
   grid-template-columns: repeat(2, 10em);
@@ -35,6 +40,7 @@ body {
   text-align: center;
   grid-gap: 1em;
 }
+
 .input-fields {
   display: grid;
   justify-content: center;
@@ -42,7 +48,8 @@ body {
   margin-bottom: 2em;
   margin-top: 1em;
 }
-.input-fields > strong {
+
+.input-fields>strong {
   margin-top: 1em;
 }
 
@@ -60,21 +67,24 @@ body {
 .footer a {
   color: #db85be;
 }
+
 .language-change {
   position: absolute;
   right: 0.5em;
   top: 0.5em;
 }
-.language-change > button {
+
+.language-change>button {
   background: none;
   color: #f2cee6;
   border: none;
 }
 
-.language-change > button:hover {
+.language-change>button:hover {
   border: 1px solid;
 }
-@media (max-width: 500px) {
+
+@media (max-width: 850px) {
   .App {
     text-align: center;
     margin-top: 2em;
@@ -87,7 +97,7 @@ body {
     padding: 0;
   }
 
-  .types-table > div {
+  .types-table>div {
     line-height: 1.5em;
   }
 
@@ -114,7 +124,7 @@ body {
     margin-top: 1em;
   }
 
-  .colors-legend > div > div {
+  .colors-legend>div>div {
     border-radius: 0.5em;
   }
 
@@ -132,7 +142,7 @@ body {
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 850px) {
   .App {
     text-align: center;
     margin-top: 1em;
@@ -147,7 +157,7 @@ body {
     padding: 1em;
   }
 
-  .types-table > div {
+  .types-table>div {
     padding: 1em;
   }
 
@@ -158,7 +168,6 @@ body {
 
   .colors-div {
     grid-template-columns: repeat(5, 6em);
-
     grid-gap: 10px;
     grid-auto-rows: 60px;
   }
@@ -166,9 +175,12 @@ body {
   .immune-div {
     display: grid;
     justify-content: center;
+    grid-template-columns: repeat(1, 6em);
+    grid-gap: 10px;
+    grid-auto-rows: 60px;
   }
 
-  .colors-legend > div > div {
+  .colors-legend>div>div {
     border-radius: 1em;
     padding: 1em;
   }
@@ -181,6 +193,7 @@ body {
   .color-legend-label {
     margin-top: 3em;
   }
+
   .footer {
     position: absolute;
     bottom: 0;
