@@ -19,7 +19,8 @@ export default {
     steel: "Acero",
     water: "Agua",
     select: "Selecciona el/los tipo(s) del pokémon objetivo",
-    pokemon_select: "O selecciona el pokémon enemigo",
+    pokemon_select:
+      "O selecciona el pokémon enemigo (puedes escribir para encontrarlo más rápido!)",
     color_legend: "Leyenda de colores",
     immune: "Inmune",
     donate: "Donar",
@@ -46,7 +47,8 @@ export default {
     steel: "Steel",
     water: "Water",
     select: "Select the enemy type(s)",
-    pokemon_select: "Or select the enemy pokémon directly",
+    pokemon_select:
+      "Or select the enemy pokémon directly (you can type to find it faster!)",
     color_legend: "Color Legend",
     immune: "Immune",
     donate: "Donate",
