@@ -4,7 +4,7 @@ Pokémon Type Helper is a lightweight webapp to easily find vulnerabilities on a
 
 ## Live version
 
-If you only care about using the app, you can just go to the [live version](http://pokemon-type-helper.herokuapp.com/). Please, keep in mind that the first time you open the site, it might take a bit of time to turn on the server. Sorry!
+If you only care about using the app, you can just go to the [live version](https://www.pokemon-types.com/).
 
 ## Run it yourself
 
@@ -18,4 +18,4 @@ If you want to run it locally, or if you want to develop something about it, you
 
 If you have any issue or suggestion, please use don't hesitate to tell me [here](https://github.com/Kerberos9/pokemon-type-helper/issues)!
 
-Also, if you were crazy enough, you could donate [here, through Paypal](https://www.paypal.me/Kashbel).
+Also, if you were crazy enough, you could donate [here, through Ko-fi](https://ko-fi.com/kerberos9).
