@@ -1,21 +1,25 @@
 # Pokémon Type Helper
 
-Pokémon Type Helper is a lightweight webapp to easily find vulnerabilities on any type combination. For example, if you're fighting against a Rayquaza, you should put 'Flying' and 'Dragon' on the type selectors, and you would find Ice is really effective (x4) and grass is really bad (1/4).
+[🇬🇧 All this is also available in English!](https://github.com/Kerberos9/pokemon-type-helper/blob/master/README.en.md)
 
-## Live version
+Pokémon Type Helper es una ligera aplicación web para encontrar fácilmente vulnerabilidades contra cualquier pokémon o combinación de tipos. Por ejemplo, si te enfrentas a un Rayquaza, seleccionas a Rayquaza (o seleccionas los tipos Volador y Dragón), y te mostrará que los mejores ataques son los tipo hielo (x4), y los peores los de planta (1/4).
 
-If you only care about using the app, you can just go to the [live version](https://www.pokemon-types.com/).
+## Versión online
 
-## Run it yourself
+Si simplemente quieres usar la aplicación, puedes usar la [versión online](https://www.pokemon-types.com/).
 
-If you want to run it locally, or if you want to develop something about it, you just need to clone the repo, and run `npm install` to get everything ready. After that, if you want to work on it, use `npm run dev` to start a local development server, or use `npm run build && npm start` to run a local production build.
+## Versión local
 
-## Planned features
+Si quieres ejecutar la aplicación en tu propio ordenador (si no tienes/tendrás internet, o si quieres modificar cosas, o contribuír), solamente necesitas clonar el repositorio y ejecutar `npm install` para instalar todas las dependencias. Después, si quieres ejecutar un servidor de desarrollo para trabajar cómodamente, utiliza `npm run dev`, y si quieres la versión final, `npm run build && npm start`.
 
-- ✓~~Pokémon selector, so you can just put the name of the pokémon and it will fill the types~~
+## Planes de futuro
+
+- ✓~~Selector de pokémon, para seleccionar un pokémon directamente y no tener que poner los tipos manualmente~~
+
+De momento no hay ninguna funcionalidad pensada para el futuro, quitando actualizar los pokémon según vayan saliendo o haya cambios (por ejemplo, cuando el 15 de noviembre aparezca la nueva región de Galar). Si tienes alguna idea, no dudes en contármela [aquí!](https://github.com/Kerberos9/pokemon-type-helper/issues)
 
 ## Other
 
-If you have any issue or suggestion, please use don't hesitate to tell me [here](https://github.com/Kerberos9/pokemon-type-helper/issues)!
+Si tienes alguna idea, problema o sugerencia, no dudes en contármelo [aqui](https://github.com/Kerberos9/pokemon-type-helper/issues).
 
-Also, if you were crazy enough, you could donate [here, through Ko-fi](https://ko-fi.com/kerberos9).
+Ah, y si te apetece comprarme una pizza o algo, puedes hacerlo [aquí, en Ko-fi](https://ko-fi.com/kerberos9).
