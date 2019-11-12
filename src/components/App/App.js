@@ -122,7 +122,9 @@ class App extends Component {
     control: (base, state) => ({
       ...base,
       background: "#230c33",
-      color: "#f2cee6"
+      color: "#f2cee6",
+      textAlign: "center",
+      width: "100%"
     }),
     menuList: base => ({
       ...base,
@@ -139,12 +141,19 @@ class App extends Component {
     singleValue: base => ({
       ...base,
       background: "#230c33",
-      color: "#f2cee6"
+      color: "#f2cee6",
+      width: "100%",
+      textAlign: "center",
+      marginLeft: "1.5em"
     }),
     input: base => ({
       ...base,
       background: "#230c33",
       color: "#f2cee6"
+    }),
+    placeholder: base => ({
+      ...base,
+      width: "100%"
     })
   };
 
