@@ -260,7 +260,11 @@ class App extends Component {
               Github
             </a>{" "}
             - Discord: Kerberos#7290 -{" "}
-            <a href="https://ko-fi.com/kerberos9" target="_blank">
+            <a
+              href="https://ko-fi.com/kerberos9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {this.getTranslation("donate")}
             </a>
           </div>
