@@ -1,4 +1,4 @@
-export default {
+const translations = {
   es: {
     bug: "Bicho",
     dark: "Siniestro",
@@ -56,3 +56,5 @@ export default {
     select_placeholder: "Select..."
   }
 };
+
+export default translations;
