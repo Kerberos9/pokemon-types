@@ -6,7 +6,7 @@ Pokémon Types es una ligera aplicación web para encontrar fácilmente vulnerab
 
 ## Versión online
 
-Si simplemente quieres usar la aplicación, puedes usar la [versión online](https://www.pokemon-types.com/).
+Si simplemente quieres usar la aplicación, puedes usar la [versión online](https://pokemon-types.com/).
 
 ## Versión local
 
