@@ -4,7 +4,7 @@ Pokémon Type Helper is a lightweight webapp to easily find vulnerabilities on a
 
 ## Live version
 
-If you only care about using the app, you can just go to the [live version](https://www.pokemon-types.com/).
+If you only care about using the app, you can just go to the [live version](https://pokemon-types.com/).
 
 ## Run it yourself
 
