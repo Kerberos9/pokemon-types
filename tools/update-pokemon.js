@@ -17,10 +17,11 @@ let fetchPokemon = async () => {
   for (const t of types) {
     let typesPokemon = [];
     let result = await fetch(`${baseUrl}type/${t}`);
-    let j = await result.json();
+      let j = await result.json();
     if (j.id < 30) {
-      j.pokemon.forEach(p =>
-        typesPokemon.push(formatPokemonName(p.pokemon.name))
+        j.pokemon.forEach(p =>
+
+            typesPokemon.push(formatPokemonName(p.pokemon.name))
       );
       pokemonTypeList[j.name] = typesPokemon;
     }
@@ -45,7 +46,7 @@ let formatPokemonList = () => {
       value: `${titleCase(pokemon[n][0])}|${
         pokemon[n][1] ? titleCase(pokemon[n][1]) : titleCase(pokemon[n][0])
       }`,
-      label: n
+        label: n
     });
   }
   fs.writeFileSync(
