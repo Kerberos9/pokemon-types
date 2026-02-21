@@ -263,7 +263,7 @@ class App extends Component {
           </div>
           <div className='footer'>
             <a href='https://github.com/Kerberos9/pokemon-type-helper'>Github</a> - Discord:
-            Kerberos#7290 -{' '}
+            1kerberos -{' '}
             <a href='https://ko-fi.com/kerberos9' target='_blank' rel='noopener noreferrer'>
               {this.getTranslation('donate')}
             </a>
